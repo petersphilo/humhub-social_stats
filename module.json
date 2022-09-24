@@ -1,7 +1,7 @@
 {
     "id": "social_stats",
     "name": "Social Stats",
-    "description": "This module provides general statistics on overall activity, with charts of hourly and daily activity",
+    "description": "This module provides general statistics on overall activity, with charts of hourly and daily activity (This is obviously only available to admins..)",
     "keywords": [
         "usage", "statistics"
     ],
