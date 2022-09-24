@@ -56,7 +56,7 @@ $MyBR='<br>';
 			.myturquoiseDark a:hover, a.myturquoiseDark:hover {color: #215868; }
 			.SlideyBlock {display: inline-block; margin: 0.5em 1em 0.5em 0em; min-width: 16em; vertical-align: top; }
 			.PeriodSelect, .HourlyChartSelect, .dlInactiveUsers {cursor: pointer; }
-			.myFullWidth{width: 100%; margin: 0 auto; min-height: 400px; height: 60%; }
+			.myFullWidth{width: 100%; margin: 0 auto; min-height: 500px; height: 60%; }
 			.MyDataLoading {
 				text-shadow: 0px 0px 1px rgba(255,255,255,1), 0px 0px 7px rgba(90,255,90,0.75), 0px 0px 14px rgba(60,255,60,0.6), 0px 0px 22px rgba(90,255,90,0.5); color: rgba(26,130,133,1); 
 				animation: GlowyGlowAnim 2s linear infinite; 
@@ -71,7 +71,7 @@ $MyBR='<br>';
 		<div style='margin: 1em 1em 0 1em; ' id='' class='myjustify myfont'>
 	
 			<h4>&#x1F4CA; Social Stats! &#x1F9EE; &#x1F5C4; &#x1F5C3;</h4>
-	
+			
 			<br><br>
 			<!-- Logins, Posts, Comments, Likes, Follows -->
 	
