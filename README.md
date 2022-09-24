@@ -1,6 +1,14 @@
 # Social Stats
 This module provides general statistics on overall activity, with charts of hourly and daily activity
 
+### Please Note
+
+Historical data will take time to populate!  
+you will see the chart build up every day..  
+The first day, it'll look empty..
+
+This is where Mater Yoday should intervene with some sort of aphorism about patience..
+
 ## Installation
 
 - Clone the social_stats module into your modules directory
