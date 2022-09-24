@@ -235,7 +235,9 @@ $MyBR='<br>';
 		<canvas class='myFullWidth margbothalf' id='MyDailyChart'></canvas>
 		
 		<div class='mycentertext margbotfull mySlightlySmallerText'>
-			These are <span class='myita'>total</span> numbers per day.. 
+			These are <span class='myita'>total</span> numbers per day..<br>
+			<span class='mySmallerText'>Please note that the data from this chart will build at the rate of once per day..<br>
+			So you will only see data points appear once per day..</span>
 		</div>
 		
 		<span class='mySmallerText'>Historical Chart Process Time: <span class='DailyExec'>...</span></span>
