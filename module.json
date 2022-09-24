@@ -1,0 +1,13 @@
+{
+    "id": "social_stats",
+    "name": "Social Stats",
+    "description": "This module provides general statistics on overall activity, with charts of hourly and daily activity",
+    "keywords": [
+        "usage", "statistics"
+    ],
+    "version": "0.9",
+    "humhub": {
+        "minVersion": "1.12.1"
+    },
+    "screenshots": ["assets/screen-1.jpg","assets/screen-2.jpg","assets/screen-3.jpg"]
+}
