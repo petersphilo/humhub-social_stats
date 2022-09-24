@@ -17,8 +17,7 @@ Eventually, i hope to have this module in the 'store'
 
 ## Donationware -- Consider a Donation!!
 
-Your doantion would really, really, really, really help!
-
+Your doantion would really, really, really, really help!  
 https://www.paypal.com/donate/?hosted_button_id=AEA7Q4V5RMY4S
 
 Thank You!
