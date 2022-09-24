@@ -70,7 +70,7 @@ $MyBR='<br>';
 		
 		<div style='margin: 1em 1em 0 1em; ' id='' class='myjustify myfont'>
 	
-			<h4>📊 Social Stats! 🧮 🗄 🗃</h4>
+			<h4>&#x1F4CA; Social Stats! &#x1F9EE; &#x1F5C4; &#x1F5C3;</h4>
 	
 			<br><br>
 			<!-- Logins, Posts, Comments, Likes, Follows -->
