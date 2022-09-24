@@ -11,10 +11,7 @@
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  
  */
 
-
-use Yii;
 use humhub\modules\admin\permissions\ManageModules;
-
 use yii\helpers\Url;
 use yii\helpers\Html;
 use yii\base\Application;
@@ -26,7 +23,7 @@ $_SESSION['social_stats_sesh']='MySocialStatsSesh';
 
 use humhub\modules\social_stats; 
 
-if (!Yii::$app->user->can(ManageModules::class)) {
+if (!\Yii::$app->user->can(ManageModules::class)) {
 	return; 
 	}
 
@@ -255,7 +252,7 @@ $MyBR='<br>';
 		<div class='mycentertext margbotfull myita myturquoiseDark HourlyChartReady MyDataLoading'>Please wait for data to load..</div>
 		
 		<?php
-			$ThisTimeZone=Yii::$app->getTimeZone(); 
+			$ThisTimeZone = \Yii::$app->getTimeZone(); 
 			/* echo $MyBR.$ThisTimeZone."; date('T'): ".date('T')."; date('P'): ".date('P')."; date('P') short: ".substr(date('P'),0,3)."; just city: ".substr($ThisTimeZone,(strpos($ThisTimeZone,'/')+1));  */
 		?>
 		
