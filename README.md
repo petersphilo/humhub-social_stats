@@ -9,13 +9,25 @@ The first day, it'll look empty..
 
 This is where Master Yoda should intervene with some sort of aphorism about patience..
 
-## Installation
+## Installation (Using Git Clone)
 
 - Clone the social_stats module into your modules directory
 ```
 cd protected/modules
 git clone https://github.com/petersphilo/humhub-social_stats.git social_stats
 ```
+
+- Go to Admin > Modules. You should now see the `Social Stats` module in your list of installed modules
+
+- Click "Enable". This will install the module for you
+
+Eventually, i hope to have this module in the 'store'
+
+## Installation (Manually, using Release zip - for those not comfortable with the command line)
+
+- Download the zip file from /releases/latest
+
+- Upload it to the protected/modules directory and expand it (then delete the zip file)
 
 - Go to Admin > Modules. You should now see the `Social Stats` module in your list of installed modules
 
