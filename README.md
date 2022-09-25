@@ -33,6 +33,8 @@ Thank You!
 
 ## ScreenShots
 
+This is pretty much how it looks:
+
 ![ScreenShot 1](/assets/screen-1.jpg?raw=true "ScreenShot 1")  
 ![ScreenShot 2](/assets/screen-2.jpg?raw=true "ScreenShot 2")  
 ![ScreenShot 3](/assets/screen-3.jpg?raw=true "ScreenShot 3")
