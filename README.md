@@ -27,7 +27,7 @@ Eventually, i hope to have this module in the 'store'
 
 - Download the zip file from [/releases/latest](https://github.com/petersphilo/humhub-social_stats/releases/latest)
 
-- Upload it to the protected/modules directory and expand it (then delete the zip file)
+- Upload it to the `protected/modules` directory of your HumHub installation and expand it (then delete the zip file)
 
 - Go to Admin > Modules. You should now see the `Social Stats` module in your list of installed modules
 
