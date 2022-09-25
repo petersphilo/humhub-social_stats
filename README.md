@@ -25,7 +25,7 @@ Eventually, i hope to have this module in the 'store'
 
 ## Installation (Manually, using Release zip - for those not comfortable with the command line)
 
-- Download the zip file from /releases/latest
+- Download the zip file from (/releases/latest)
 
 - Upload it to the protected/modules directory and expand it (then delete the zip file)
 
