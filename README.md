@@ -25,7 +25,7 @@ Eventually, i hope to have this module in the 'store'
 
 ## Installation (Manually, using Release zip - for those not comfortable with the command line)
 
-- Download (or use wget) the zip file here: [https://github.com/petersphilo/humhub-social_stats/releases/latest/social_stats.zip](https://github.com/petersphilo/humhub-social_stats/releases/latest/social_stats.zip)
+- Download (or use wget) the zip file here: [https://github.com/petersphilo/humhub-social_stats/releases/latest/download/social_stats.zip](https://github.com/petersphilo/humhub-social_stats/releases/latest/download/social_stats.zip)
 
 - Upload it to the `protected/modules` directory of your HumHub installation and expand it (then delete the zip file)
 
