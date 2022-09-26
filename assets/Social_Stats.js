@@ -74,6 +74,24 @@
 					}); 
 				
 				
+				$('.dlHistDataBU').on('click',function(){
+					fetch('./?dlHistDataBU=Yes')
+						.then(resp => resp.blob())
+						.then(blob => {
+							var Myurl = window.URL.createObjectURL(blob);
+							const TempdlLink = document.createElement('a');
+							TempdlLink.style.display = 'none';
+							TempdlLink.href = Myurl;
+							TempdlLink.download = 'HistoricalChartData.csv.gz';
+							document.body.appendChild(TempdlLink);
+							TempdlLink.click();
+							window.URL.revokeObjectURL(Myurl);
+							TempdlLink.remove();
+							})
+						.catch(() => alert('something went wrong..'));
+					}); 
+				
+				
 				
 				
 				/* Begin Historical Data */
