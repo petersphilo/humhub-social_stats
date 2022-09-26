@@ -5,9 +5,9 @@
     "keywords": [
         "usage", "statistics"
     ],
-    "version": "0.9",
+    "version": "1.0",
     "humhub": {
-        "minVersion": "1.12.1"
+        "minVersion": "1.12.0"
     },
     "screenshots": ["assets/screen-1.jpg","assets/screen-2.jpg","assets/screen-3.jpg"]
 }
