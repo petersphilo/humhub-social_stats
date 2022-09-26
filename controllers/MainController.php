@@ -53,6 +53,7 @@ class MainController extends \humhub\modules\admin\components\Controller{
 			$dlInactiveAccnts_cmd=Yii::$app->db->createCommand("SELECT user.email,user.username 
 				FROM user 
 				WHERE last_login is null;")->queryAll(); 
+			/* $dlInactiveAccnts_cmd=Yii::$app->db->createCommand("SELECT user.email, user.username, profile.previousid FROM user, profile WHERE ((user.last_login is null)AND(profile.user_id=user.id));")->queryAll();  */
 			foreach($dlInactiveAccnts_cmd as $dlInactiveAccnts_row){
 				$dlInactiveAccntsFile.=$dlInactiveAccnts_row['email'].$MyTabChar.$dlInactiveAccnts_row['username']/* .$MyTabChar.$dlInactiveAccnts_row['previousid'] */."\n";
 				}
