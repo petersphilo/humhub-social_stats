@@ -40,7 +40,7 @@ class MainController extends \humhub\modules\admin\components\Controller{
 	
 	
 	public function actionIndex(){
-		if(Yii::$app->request->post()||Yii::$app->request->get('dlInactiveAccnts')){$this->MyDataRequest(); }
+		if(Yii::$app->request->post()||Yii::$app->request->get('dlInactiveAccnts')||Yii::$app->request->get('dlHistDataBU')){$this->MyDataRequest(); }
 		else{return $this->render('index'); }
 		}
 	
@@ -49,14 +49,27 @@ class MainController extends \humhub\modules\admin\components\Controller{
 		
 		if(Yii::$app->request->get('dlInactiveAccnts')=='Yes'){
 			$MyTabChar="\t"; 
-			$dlInactiveAccntsFile='email'.$MyTabChar.'username'.$MyTabChar.'previousid'."\n"; 
+			$dlInactiveAccntsFile='email'.$MyTabChar.'username'/* .$MyTabChar.'previousid' */."\n"; 
 			$dlInactiveAccnts_cmd=Yii::$app->db->createCommand("SELECT user.email,user.username 
 				FROM user 
 				WHERE last_login is null;")->queryAll(); 
 			foreach($dlInactiveAccnts_cmd as $dlInactiveAccnts_row){
-				$dlInactiveAccntsFile.=$dlInactiveAccnts_row['email'].$MyTabChar.$dlInactiveAccnts_row['username'].$MyTabChar.$dlInactiveAccnts_row['previousid']."\n";
+				$dlInactiveAccntsFile.=$dlInactiveAccnts_row['email'].$MyTabChar.$dlInactiveAccnts_row['username']/* .$MyTabChar.$dlInactiveAccnts_row['previousid'] */."\n";
 				}
 			echo $dlInactiveAccntsFile; 
+			exit;
+			}
+		
+		elseif(Yii::$app->request->get('dlHistDataBU')=='Yes'){
+			$MyTabChar="\t"; 
+			$dlHistDataBUFile='id'.$MyTabChar.'x_value'.$MyTabChar.'y_value'.$MyTabChar.'category'."\n"; 
+			$dlHistDataBU_cmd=Yii::$app->db->createCommand("SELECT id,x_value,y_value,category 
+				FROM social_stats;")->queryAll(); 
+			foreach($dlHistDataBU_cmd as $dlHistDataBU_row){
+				$dlHistDataBUFile.=$dlHistDataBU_row['id'].$MyTabChar.$dlHistDataBU_row['x_value'].$MyTabChar.$dlHistDataBU_row['y_value'].$MyTabChar.$dlHistDataBU_row['category']."\n";
+				}
+			echo gzencode($dlHistDataBUFile, 6); 
+			/* echo $dlHistDataBUFile; */
 			exit;
 			}
 		
