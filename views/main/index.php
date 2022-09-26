@@ -57,7 +57,7 @@ $MyBR='<br>';
 			.myturquoiseDark, .myturquoiseDark a, .myturquoiseDark a:visited, a.myturquoiseDark, a.myturquoiseDark:visited {color: #1a8285; } /* 0070C0 orig: 014539 */
 			.myturquoiseDark a:hover, a.myturquoiseDark:hover {color: #215868; }
 			.SlideyBlock {display: inline-block; margin: 0.5em 1em 0.5em 0em; min-width: 16em; vertical-align: top; }
-			.PeriodSelect, .HourlyChartSelect, .dlInactiveUsers {cursor: pointer; }
+			.PeriodSelect, .HourlyChartSelect, .dlInactiveUsers, .dlHistDataBU {cursor: pointer; }
 			.myFullWidth{width: 100%; margin: 0 auto; min-height: 500px; height: 60%; }
 			.MyDataLoading {
 				text-shadow: 0px 0px 1px rgba(255,255,255,1), 0px 0px 7px rgba(90,255,90,0.75), 0px 0px 14px rgba(60,255,60,0.6), 0px 0px 22px rgba(90,255,90,0.5); color: rgba(26,130,133,1); 
@@ -236,11 +236,14 @@ $MyBR='<br>';
 		
 		<canvas class='myFullWidth margbothalf' id='MyDailyChart'></canvas>
 		
-		<div class='mycentertext margbotfull mySlightlySmallerText'>
+		<div class='mycentertext margbotquart mySlightlySmallerText'>
 			These are <span class='myita'>total</span> numbers per day..<br>
 			<span class='mySmallerText'>Please note that the data from this chart will build at the rate of once per day..<br>
 			So you will only see data points appear once per day..</span>
 		</div>
+				<div class='myjustify myrighttext margbothalf'>
+					<span class='mySmallerText myturquoiseDark dlHistDataBU'>download backup of this data</span>
+				</div>
 		
 		<span class='mySmallerText'>Historical Chart Process Time: <span class='DailyExec'>...</span></span>
 		
