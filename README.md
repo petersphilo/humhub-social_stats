@@ -18,6 +18,18 @@ This is why the Historical chart just below is interesting,
 because it records the number of Unique Logins every 24 hours, and displays them once per day..  
 The rest of the data behaves more as you'd expect..  
 
+
+
+## Installation - Now Available in the Store!
+
+Thanks to the HumHub Community Managers, `Social Stats` is now available in the Modules 'Store' within your HumHub installation!
+
+As an Admin, go to `Administration`, then `Modules`, then you can search for `Social Stats`
+
+Thank You!
+
+---
+
 ## Installation (Using Git Clone)
 
 - Clone the social_stats module into your modules directory
