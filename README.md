@@ -27,7 +27,6 @@ As an Admin, go to `Administration`, then `Modules`, then you can search for `So
 
 Thank You!
 
----
 <br><br>
 
 ## Donationware -- Consider a Donation!!
@@ -37,6 +36,7 @@ https://www.paypal.com/donate/?hosted_button_id=AEA7Q4V5RMY4S
 
 Thank You!
 
+<br><br>
 
 ## ScreenShots
 
@@ -46,7 +46,6 @@ This is pretty much how it looks:
 ![ScreenShot 2](/assets/screen-2.jpg?raw=true "ScreenShot 2")  
 ![ScreenShot 3](/assets/screen-3.jpg?raw=true "ScreenShot 3")
 
----
 <br><br>
 
 ## Other ways to install
