@@ -1,13 +1,19 @@
 {
-    "id": "social_stats",
-    "name": "Social Stats",
-    "description": "This module provides general statistics on overall activity, with charts of hourly and daily activity (This is only available to admins..)<br><br>Please note that uninstalling this module will destroy its historical chart data..",
-    "keywords": [
-        "usage", "statistics"
-    ],
-    "version": "1.0.3",
-    "humhub": {
-        "minVersion": "1.12.0"
-    },
-    "screenshots": ["assets/screen-1.jpg","assets/screen-2.jpg","assets/screen-3.jpg"]
+	"id": "social_stats",
+	"name": "Social Stats",
+	"homepage": "https://github.com/petersphilo/humhub-social_stats",
+	"authors": [{
+		"name": "Peter Zieseniss",
+		"homepage": "zconsulting.net",
+		"role": "The Alpha, The Omega - just kidding; it's just me.."
+		}],
+	"description": "This module provides general statistics on overall activity, with charts of hourly and daily activity (This is only available to admins..)<br><br>Please note that uninstalling this module will destroy its historical chart data..",
+	"keywords": [
+		"usage", "statistics"
+		],
+	"version": "1.0.5",
+	"humhub": {
+		"minVersion": "1.12.0"
+		},
+	"screenshots": ["assets/screen-1.jpg","assets/screen-2.jpg","assets/screen-3.jpg"]
 }
