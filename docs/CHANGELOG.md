@@ -1,4 +1,12 @@
 
+### 1.0.5
+
+- Fixed redirection issue for HumHub installs that **are not using** the `enablePrettyUrl` config option
+
+### 1.0.4
+
+- added json info..
+
 ### 1.0.3
 
 - added explanation about Logins data..
