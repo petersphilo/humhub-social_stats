@@ -9,6 +9,15 @@ The first day, it'll look empty..
 
 This is where Master Yoda should intervene with some sort of aphorism about patience..
 
+### Explanation of Logins data:
+
+Please note that HumHub does not record historical data regarding Logins..  
+This means that we are only ever seeing '*Individual People's Logins*' (Unique Logins);  
+so, the numbers above show how many people logged in – or renewed their session – at least once in the given time..  
+This is why the Historical chart just below is interesting,  
+because it records the number of Unique Logins every 24 hours, and displays them once per day..  
+The rest of the data behaves more as you'd expect..  
+
 ## Installation (Using Git Clone)
 
 - Clone the social_stats module into your modules directory
@@ -25,7 +34,7 @@ Eventually, i hope to have this module in the 'store'
 
 ## Installation (Manually, using Release zip - for those not comfortable with the command line)
 
-- Download (or use wget) the zip file here: [https://github.com/petersphilo/humhub-social_stats/releases/latest/download/social_stats.zip](https://github.com/petersphilo/humhub-social_stats/releases/latest/download/social_stats.zip)
+- Download the zip file from [/releases/latest](https://github.com/petersphilo/humhub-social_stats/releases/latest)
 
 - Upload it to the `protected/modules` directory of your HumHub installation and expand it (then delete the zip file)
 
