@@ -46,7 +46,11 @@ This is pretty much how it looks:
 ![ScreenShot 2](/assets/screen-2.jpg?raw=true "ScreenShot 2")  
 ![ScreenShot 3](/assets/screen-3.jpg?raw=true "ScreenShot 3")
 
+  
+
 ---
+
+  
 
 ## Other ways to install
 
