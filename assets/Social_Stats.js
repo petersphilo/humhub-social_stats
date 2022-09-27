@@ -23,18 +23,23 @@
 					
 					
 					MyDailyChart,
-					MyHourlyBreakdownChart; 
+					MyHourlyBreakdownChart,
 					
-				var MyLocalVars=new Object();
-				
-				var MyTestText='', 
+					MyTestText='', 
 					MyBR='<br>', 
-					HSelector='', 
-					GDSelector='', 
-					MyHourlyBreakdownChart; 
+					GDSelector='',
+					
+					MyCurrentGetURL,
+					MyNewGetURL,
+					MyFetchURL;
 				
+				MyCurrentGetURL=window.location.search; 
+				/*
+				if(MyCurrentGetURL.length){MyNewGetURL=MyCurrentGetURL+'&'; }
+				else{MyNewGetURL='./?'; }
+				*/
 				var GDPost=$.post(
-					'./',
+					MyCurrentGetURL,
 					{GeneralData:'Yes'},
 					function(GData){
 						Object.keys(GData).forEach(function(key){
@@ -57,7 +62,11 @@
 				
 				
 				$('.dlInactiveUsers').on('click',function(){
-					fetch('./?dlInactiveAccnts=Yes')
+					MyCurrentGetURL=window.location.search; 
+					if(MyCurrentGetURL.length){MyNewGetURL=MyCurrentGetURL+'&dlInactiveAccnts=Yes'; }
+					else{MyNewGetURL='./?dlInactiveAccnts=Yes'; }
+					/* console.log('MyCurrentGetURL.length: '+MyCurrentGetURL.length+'; MyCurrentGetURL: '+MyCurrentGetURL+'; MyNewGetURL: '+MyNewGetURL);  */
+					fetch(MyNewGetURL)
 						.then(resp => resp.blob())
 						.then(blob => {
 							var Myurl = window.URL.createObjectURL(blob);
@@ -75,7 +84,10 @@
 				
 				
 				$('.dlHistDataBU').on('click',function(){
-					fetch('./?dlHistDataBU=Yes')
+					MyCurrentGetURL=window.location.search; 
+					if(MyCurrentGetURL.length){MyNewGetURL=MyCurrentGetURL+'&dlHistDataBU=Yes'; }
+					else{MyNewGetURL='./?dlHistDataBU=Yes'; }
+					fetch(MyNewGetURL)
 						.then(resp => resp.blob())
 						.then(blob => {
 							var Myurl = window.URL.createObjectURL(blob);
@@ -160,7 +172,7 @@
 				
 				
 				var DailyPost=$.post(
-					'./',
+					MyCurrentGetURL,
 					{HistoricalDailyData:'Yes'},
 					function(DailyData){
 						DailyLoginsFull.length = 0;
@@ -335,7 +347,7 @@
 				
 				
 				var HourlyPost=$.post(
-					'./',
+					MyCurrentGetURL,
 					{HourlyActivityData:'Yes'},
 					function(HourlyData){
 						HourlyBreakdownLogins.length = 0;
