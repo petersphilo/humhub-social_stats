@@ -1,4 +1,8 @@
 
+### 1.0.3
+
+- added explanation about Logins data..
+
 ### 1.0.2
 
 - bugfix
