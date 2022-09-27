@@ -49,9 +49,9 @@ $MyBR='<br>';
 			.margbothalf {margin-bottom: 0.5em !important; }
 			.margbotquart {margin-bottom: 0.25em !important; }
 			.myjustify {text-align: justify; }
-			.mysixteenpix {font-size: 1.2em; line-height: 1.2em; }
-			.myfifteenpix {font-size: 1.1em; line-height: 1.1em; }
-			.mySmallerText {font-size: 0.8em; line-height: 0.9em; }
+			.mysixteenpix {font-size: 1.2em; line-height: 1.4em; }
+			.myfifteenpix {font-size: 1.1em; line-height: 1.3em; }
+			.mySmallerText {font-size: 0.8em; line-height: 1em; }
 			.mySlightlySmallerText {font-size: 0.9em; line-height: 1.2em; }
 			.myfont, .myfont div, .myfont span {font-family: "Open Sans", "Helvetica Neue", Helvetica Neue, "Helvetica", Helvetica, Verdana, sans serif !important; }
 			.myturquoiseDark, .myturquoiseDark a, .myturquoiseDark a:visited, a.myturquoiseDark, a.myturquoiseDark:visited {color: #1a8285; } /* 0070C0 orig: 014539 */
@@ -77,7 +77,7 @@ $MyBR='<br>';
 			<br><br>
 			<!-- Logins, Posts, Comments, Likes, Follows -->
 	
-			<div class='margbotfull'>
+			<div class='margbothalf'>
 				<div class='myjustify margbothalf mysixteenpix mybold myunderline'>
 					General:
 				</div>
@@ -98,7 +98,7 @@ $MyBR='<br>';
 			<hr>
 			<div class='SlideyBlock'>
 				<div class='myjustify margbothalf mysixteenpix mybold myunderline'>
-					Logins:
+					Unique Logins:
 				</div>
 				<div class='myjustify margbotquart'>
 					Logins in last 24h: <span class='myfifteenpix myturquoiseDark GeneralData LoginsOneDay'>...</span>
@@ -206,7 +206,16 @@ $MyBR='<br>';
 				<br>
 			</div>
 		</div>
-		<div class='mySmallerText'>General Data Process Time: <span class='GeneralExec'>...</span></div>
+		<div class='mySmallerText margbotfull'>General Data Process Time: <span class='GeneralExec'>...</span></div>
+		<div class='mySlightlySmallerText myjustify'>
+			<span class='myita'>Explanation of Logins data:</span><br>
+			Please note that HumHub does not record historical data regarding Logins..<br>
+			This means that we are only ever seeing '<span class='myita'>Individual People's Logins</span>' (Unique Logins);<br>
+			so, the numbers above show how many people logged in – or renewed their session – at least once in the given time..<br>
+			This is why the Historical chart just below is interesting,<br>
+			because it records the number of Unique Logins every 24 hours, and displays them once per day..<br>
+			The rest of the data behaves more as you'd expect..
+		</div>
 		<br>
 		
 		<hr>
