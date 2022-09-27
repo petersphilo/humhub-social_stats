@@ -17,8 +17,7 @@ so, the numbers above show how many people logged in – or renewed their sessio
 This is why the Historical chart just below is interesting,  
 because it records the number of Unique Logins every 24 hours, and displays them once per day..  
 The rest of the data behaves more as you'd expect..  
-
-
+<br><br>
 
 ## Installation - Now Available in the Store!
 
@@ -29,6 +28,7 @@ As an Admin, go to `Administration`, then `Modules`, then you can search for `So
 Thank You!
 
 ---
+<br><br>
 
 ## Donationware -- Consider a Donation!!
 
@@ -46,8 +46,8 @@ This is pretty much how it looks:
 ![ScreenShot 2](/assets/screen-2.jpg?raw=true "ScreenShot 2")  
 ![ScreenShot 3](/assets/screen-3.jpg?raw=true "ScreenShot 3")
 
-<br><br>
 ---
+<br><br>
 
 ## Other ways to install
 
