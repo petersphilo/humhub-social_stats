@@ -16,7 +16,7 @@
 use humhub\modules\admin\permissions\ManageModules;
 
 use yii\helpers\Url;
-use yii\helpers\Html;
+use humhub\libs\Html;
 use yii\base\Application;
 use yii\db\Connection; 
 /* use yii\base\Module;  */
@@ -79,142 +79,147 @@ $MyBR='<br>';
 	
 			<div class='margbothalf'>
 				<div class='myjustify margbothalf mysixteenpix mybold myunderline'>
-					General:
+					<?= Yii::t('SocialStatsModule.base', 'General:'); ?>
 				</div>
-				<div class='mycentertext margbotfull myita myturquoiseDark GeneralDataReady MyDataLoading'>Please wait for data to load..</div>
+				<div class='mycentertext margbotfull myita myturquoiseDark GeneralDataReady MyDataLoading'><?= Yii::t('SocialStatsModule.base', 'Please wait for data to load..'); ?></div>
 				<div class='myjustify '>
-					Total Active Users (logged in at least once): <span class='myfifteenpix myturquoiseDark HourlyData TotalLogins'>...</span>
+					<?= Yii::t('SocialStatsModule.base', 'Total Active Users (logged in at least once):'); ?> <span class='myfifteenpix myturquoiseDark HourlyData TotalLogins'>...</span>
 				</div>
 				<div class='myjustify myrighttext margbotquart'>
-					<span class='mySmallerText myturquoiseDark dlInactiveUsers'>download Users never logged in</span>
+					<span class='mySmallerText myturquoiseDark dlInactiveUsers'><?= Yii::t('SocialStatsModule.base', 'download Users never logged in'); ?></span>
 				</div>
 				<div class='myjustify margbotfull'>
-					Please Note: Loading this page is quite costly to the server; please don't reload too often..
+					<?= Yii::t('SocialStatsModule.base', 'Please Note: Loading this page is quite costly to the server; please don\'t reload too often..'); ?>
 					<br>
-					Changing the settings on the Charts doesn't affect the server at all, so.. go nuts! &#x1F92A;
+					<?= Yii::t('SocialStatsModule.base', 'Changing the settings on the Charts doesn\'t affect the server at all, so.. go nuts! &#x1F92A;'); ?>
 				</div>
 				<br>
 			</div>
 			<hr>
 			<div class='SlideyBlock'>
 				<div class='myjustify margbothalf mysixteenpix mybold myunderline'>
-					Unique Logins:
+					<?= Yii::t('SocialStatsModule.base', 'Unique Logins:'); ?>
 				</div>
 				<div class='myjustify margbotquart'>
-					Logins in last 24h: <span class='myfifteenpix myturquoiseDark GeneralData LoginsOneDay'>...</span>
+					<?= Yii::t('SocialStatsModule.base', 'Logins in last 24h:'); ?> <span class='myfifteenpix myturquoiseDark GeneralData LoginsOneDay'>...</span>
 				</div>
 				<div class='myjustify margbotquart'>
-					Logins in last 7 days: <span class='myfifteenpix myturquoiseDark GeneralData LoginsOneWeek'>...</span>
+					<?= Yii::t('SocialStatsModule.base', 'Logins in last 7 days:') ?> <span class='myfifteenpix myturquoiseDark GeneralData LoginsOneWeek'>...</span>
 				</div>
 				<div class='myjustify margbotquart'>
-					Logins in last 30 days: <span class='myfifteenpix myturquoiseDark GeneralData LoginsOneMonth'>...</span>
+					<?= Yii::t('SocialStatsModule.base', 'Logins in last 30 days:'); ?> <span class='myfifteenpix myturquoiseDark GeneralData LoginsOneMonth'>...</span>
 				</div>
 				<div class='myjustify margbotquart'>
-					Logins in last 3 months: <span class='myfifteenpix myturquoiseDark GeneralData LoginsOneQuarterY'>...</span>
+					<?= Yii::t('SocialStatsModule.base', 'Logins in last 3 months:') ?> <span class='myfifteenpix myturquoiseDark GeneralData LoginsOneQuarterY'>...</span>
 				</div>
 				<div class='myjustify margbothalf'>
-					Logins in last 6 months: <span class='myfifteenpix myturquoiseDark GeneralData LoginsOneHalfY'>...</span>
+					<?= Yii::t('SocialStatsModule.base', 'Logins in last 6 months:') ?> <span class='myfifteenpix myturquoiseDark GeneralData LoginsOneHalfY'>...</span>
 				</div>
 				<br>
 			</div>
 			
 			<div class='SlideyBlock'>
 				<div class='myjustify margbothalf mysixteenpix mybold myunderline'>
-					Posts:
+					<?= Yii::t('SocialStatsModule.base', 'Posts:'); ?>
 				</div>
 				<div class='myjustify margbotquart'>
-					Posts in last 24h: <span class='myfifteenpix myturquoiseDark GeneralData PostsOneDay'>...</span>
+					<?= Yii::t('SocialStatsModule.base', 'Posts in last 24h:'); ?> <span class='myfifteenpix myturquoiseDark GeneralData PostsOneDay'>...</span>
 				</div>
 				<div class='myjustify margbotquart'>
-					Posts in last 7 days: <span class='myfifteenpix myturquoiseDark GeneralData PostsOneWeek'>...</span>
+					<?= Yii::t('SocialStatsModule.base', 'Posts in last 7 days:') ?> <span class='myfifteenpix myturquoiseDark GeneralData PostsOneWeek'>...</span>
 				</div>
 				<div class='myjustify margbotquart'>
-					Posts in last 30 days: <span class='myfifteenpix myturquoiseDark GeneralData PostsOneMonth'>...</span>
+					<?= Yii::t('SocialStatsModule.base', 'Posts in last 30 days:') ?> <span class='myfifteenpix myturquoiseDark GeneralData PostsOneMonth'>...</span>
 				</div>
 				<div class='myjustify margbotquart'>
-					Posts in last 3 months: <span class='myfifteenpix myturquoiseDark GeneralData PostsOneQuarterY'>...</span>
+					<?= Yii::t('SocialStatsModule.base', 'Posts in last 3 months:') ?> <span class='myfifteenpix myturquoiseDark GeneralData PostsOneQuarterY'>...</span>
 				</div>
 				<div class='myjustify margbothalf'>
-					Posts in last 6 months: <span class='myfifteenpix myturquoiseDark GeneralData PostsOneHalfY'>...</span>
+					<?= Yii::t('SocialStatsModule.base', 'Posts in last 6 months:') ?> <span class='myfifteenpix myturquoiseDark GeneralData PostsOneHalfY'>...</span>
 				</div>
 				<br>
 			</div>
 			
 			<div class='SlideyBlock'>
 				<div class='myjustify margbothalf mysixteenpix mybold myunderline'>
-					Comments:
+					<?= Yii::t('SocialStatsModule.base', 'Comments:'); ?>
 				</div>
 				<div class='myjustify margbotquart'>
-					Comments in last 24h: <span class='myfifteenpix myturquoiseDark GeneralData CommentsOneDay'>...</span>
+					<?= Yii::t('SocialStatsModule.base', 'Comments in last 24h:'); ?> <span class='myfifteenpix myturquoiseDark GeneralData CommentsOneDay'>...</span>
 				</div>
 				<div class='myjustify margbotquart'>
-					Comments in last 7 days: <span class='myfifteenpix myturquoiseDark GeneralData CommentsOneWeek'>...</span>
+					<?= Yii::t('SocialStatsModule.base', 'Comments in last 7 days:'); ?> <span class='myfifteenpix myturquoiseDark GeneralData CommentsOneWeek'>...</span>
 				</div>
 				<div class='myjustify margbotquart'>
-					Comments in last 30 days: <span class='myfifteenpix myturquoiseDark GeneralData CommentsOneMonth'>...</span>
+					<?= Yii::t('SocialStatsModule.base', 'Comments in last 30 days:'); ?> <span class='myfifteenpix myturquoiseDark GeneralData CommentsOneMonth'>...</span>
 				</div>
 				<div class='myjustify margbotquart'>
-					Comments in last 3 months: <span class='myfifteenpix myturquoiseDark GeneralData CommentsOneQuarterY'>...</span>
+					<?= Yii::t('SocialStatsModule.base', 'Comments in last 3 months:'); ?> <span class='myfifteenpix myturquoiseDark GeneralData CommentsOneQuarterY'>...</span>
 				</div>
 				<div class='myjustify margbothalf'>
-					Comments in last 6 months: <span class='myfifteenpix myturquoiseDark GeneralData CommentsOneHalfY'>...</span>
+					<?= Yii::t('SocialStatsModule.base', 'Comments in last 6 months:') ?> <span class='myfifteenpix myturquoiseDark GeneralData CommentsOneHalfY'>...</span>
 				</div>
 				<br>
 			</div>
 			
 			<div class='SlideyBlock'>
 				<div class='myjustify margbothalf mysixteenpix mybold myunderline'>
-					Likes:
+					<?= Yii::t('SocialStatsModule.base', 'Likes:'); ?>
 				</div>
 				<div class='myjustify margbotquart'>
-					Likes in last 24h: <span class='myfifteenpix myturquoiseDark GeneralData LikesOneDay'>...</span>
+					<?= Yii::t('SocialStatsModule.base', 'Likes in last 24h:'); ?> <span class='myfifteenpix myturquoiseDark GeneralData LikesOneDay'>...</span>
 				</div>
 				<div class='myjustify margbotquart'>
-					Likes in last 7 days: <span class='myfifteenpix myturquoiseDark GeneralData LikesOneWeek'>...</span>
+					<?= Yii::t('SocialStatsModule.base', 'Likes in last 7 days:') ?> <span class='myfifteenpix myturquoiseDark GeneralData LikesOneWeek'>...</span>
 				</div>
 				<div class='myjustify margbotquart'>
-					Likes in last 30 days: <span class='myfifteenpix myturquoiseDark GeneralData LikesOneMonth'>...</span>
+					<?= Yii::t('SocialStatsModule.base', 'Likes in last 30 days:') ?> <span class='myfifteenpix myturquoiseDark GeneralData LikesOneMonth'>...</span>
 				</div>
 				<div class='myjustify margbotquart'>
-					Likes in last 3 months: <span class='myfifteenpix myturquoiseDark GeneralData LikesOneQuarterY'>...</span>
+					<?= Yii::t('SocialStatsModule.base', 'Likes in last 3 months:'); ?> <span class='myfifteenpix myturquoiseDark GeneralData LikesOneQuarterY'>...</span>
 				</div>
 				<div class='myjustify margbothalf'>
-					Likes in last 6 months: <span class='myfifteenpix myturquoiseDark GeneralData LikesOneHalfY'>...</span>
+					<?= Yii::t('SocialStatsModule.base', 'Likes in last 6 months:'); ?> <span class='myfifteenpix myturquoiseDark GeneralData LikesOneHalfY'>...</span>
 				</div>
 				<br>
 			</div>
 			
 			<div class='SlideyBlock'>
 				<div class='myjustify margbothalf mysixteenpix mybold myunderline'>
-					Follows:
+					<?= Yii::t('SocialStatsModule.base', 'Follows:'); ?>
 				</div>
 				<div class='myjustify margbotquart'>
-					Follows in last 24h: <span class='myfifteenpix myturquoiseDark GeneralData FollowsOneDay'>...</span>
+					<?= Yii::t('SocialStatsModule.base', 'Follows in last 24h:'); ?> <span class='myfifteenpix myturquoiseDark GeneralData FollowsOneDay'>...</span>
 				</div>
 				<div class='myjustify margbotquart'>
-					Follows in last 7 days: <span class='myfifteenpix myturquoiseDark GeneralData FollowsOneWeek'>...</span>
+					<?= Yii::t('SocialStatsModule.base', 'Follows in last 7 days:'); ?> <span class='myfifteenpix myturquoiseDark GeneralData FollowsOneWeek'>...</span>
 				</div>
 				<div class='myjustify margbotquart'>
-					Follows in last 30 days: <span class='myfifteenpix myturquoiseDark GeneralData FollowsOneMonth'>...</span>
+					<?= Yii::t('SocialStatsModule.base', 'Follows in last 30 days:'); ?> <span class='myfifteenpix myturquoiseDark GeneralData FollowsOneMonth'>...</span>
 				</div>
 				<div class='myjustify margbotquart'>
-					Follows in last 3 months: <span class='myfifteenpix myturquoiseDark GeneralData FollowsOneQuarterY'>...</span>
+					<?= Yii::t('SocialStatsModule.base', 'Follows in last 3 months:'); ?> <span class='myfifteenpix myturquoiseDark GeneralData FollowsOneQuarterY'>...</span>
 				</div>
 				<div class='myjustify margbothalf'>
-					Follows in last 6 months: <span class='myfifteenpix myturquoiseDark GeneralData FollowsOneHalfY'>...</span>
+					<?= Yii::t('SocialStatsModule.base', 'Follows in last 6 months:'); ?> <span class='myfifteenpix myturquoiseDark GeneralData FollowsOneHalfY'>...</span>
 				</div>
 				<br>
 			</div>
 		</div>
-		<div class='mySmallerText margbotfull'>General Data Process Time: <span class='GeneralExec'>...</span></div>
+		<div class='mySmallerText margbotfull'><?= Yii::t('SocialStatsModule.base', 'General Data Process Time:'); ?> <span class='GeneralExec'>...</span></div>
 		<div class='mySlightlySmallerText myjustify'>
-			<span class='myita'>Explanation of Logins data:</span><br>
-			Please note that HumHub does not record historical data regarding Logins..<br>
-			This means that we are only ever seeing '<span class='myita'>Individual People's Logins</span>' (Unique Logins);<br>
-			so, the numbers above show how many people logged in – or renewed their session – at least once in the given time..<br>
-			This is why the Historical chart just below is interesting,<br>
-			because it records the number of Unique Logins every 24 hours, and displays them once per day..<br>
-			The rest of the data behaves more as you'd expect..
+			<span class='myita'><?= Yii::t('SocialStatsModule.base', 'Explanation of Logins data:'); ?></span>
+			<br>
+			<?= Yii::t('SocialStatsModule.base', 'Please note that HumHub does not record historical data regarding Logins..<br>
+			This means that we are only ever seeing'); ?> '
+			<span class='myita'><?= Yii::t('SocialStatsModule.base', 'Individual People\'s Logins'); ?></span> <?= Yii::t('SocialStatsModule.base', '(Unique Logins)'); ?>;
+			<br>
+			<?= Yii::t('SocialStatsModule.base', 'so, the numbers above show how many people logged in – or renewed their session – at least once in the given time..<br>
+			This is why the Historical chart just below is interesting,'); ?>
+			<br>
+			<?= Yii::t('SocialStatsModule.base', 'because it records the number of Unique Logins every 24 hours, and displays them once per day..'); ?>
+			<br>
+			<?= Yii::t('SocialStatsModule.base', 'The rest of the data behaves more as you\'d expect..'); ?>
 		</div>
 		<br>
 		
@@ -222,39 +227,45 @@ $MyBR='<br>';
 		
 		<br><br>
 		
-		<?php
-			use humhub\modules\social_stats\Assets; 
-			$MyAssets=humhub\modules\social_stats\Assets::register($this);
+		<?php use humhub\modules\social_stats\Assets; 
+			$MyAssets = humhub\modules\social_stats\Assets::register($this);
 		?>
-		<script type='module' src='<?php echo $MyAssets->baseUrl.'/'.$MyAssets->js[0]; ?>'></script>
-		<script type='module' src='<?php echo $MyAssets->baseUrl.'/'.$MyAssets->js[1]; ?>'></script>
-		<script type='module' src='<?php echo $MyAssets->baseUrl.'/'.$MyAssets->js[2]; ?>'></script>
-		<script type='module' src='<?php echo $MyAssets->baseUrl.'/'.$MyAssets->js[3]; ?>'></script>
-		<script type='module' src='<?php echo $MyAssets->baseUrl.'/'.$MyAssets->js[4]; ?>'></script>
-		<script src='<?php echo $MyAssets->baseUrl.'/'.$MyAssets->js[5]; ?>'></script>
+		<script type='module' src='<?= $MyAssets->baseUrl.'/'.$MyAssets->js[0]; ?>'></script>
+		<script type='module' src='<?= $MyAssets->baseUrl.'/'.$MyAssets->js[1]; ?>'></script>
+		<script type='module' src='<?= $MyAssets->baseUrl.'/'.$MyAssets->js[2]; ?>'></script>
+		<script type='module' src='<?= $MyAssets->baseUrl.'/'.$MyAssets->js[3]; ?>'></script>
+		<script type='module' src='<?= $MyAssets->baseUrl.'/'.$MyAssets->js[4]; ?>'></script>
+		<script src='<?= $MyAssets->baseUrl.'/'.$MyAssets->js[5]; ?>'></script>
 		
 		
 		<div class='mycentertext margbotfull mysixteenpix mybold myunderline'>
-			Historical data - <span class='mySmallerText'>(click data titles to disable/enable)</span>
+			<?= Yii::t('SocialStatsModule.base', 'Historical data'); ?> - <span class='mySmallerText'><?= Yii::t('SocialStatsModule.base', '(click data titles to disable/enable)'); ?></span>
 		</div>
-		<div class='mycentertext margbotfull myita myturquoiseDark DailyChartReady MyDataLoading'>Please wait for data to load..</div>
+		<div class='mycentertext margbotfull myita myturquoiseDark DailyChartReady MyDataLoading'><?= Yii::t('SocialStatsModule.base', 'Please wait for data to load..'); ?></div>
 	
 		<div class='myrighttext margbotquart'>
-			<span class='PeriodSelect SelectOneWeek'>Last Week</span> - <span class='PeriodSelect SelectOneMonth'>Last Month</span> - <span class='PeriodSelect SelectOneSixMo mybold'>Last 6 Months</span> - <span class='PeriodSelect SelectOneYear'>Last Year</span> - <span class='PeriodSelect SelectOneAll'>All</span>
+			<span class='PeriodSelect SelectOneWeek'><?= Yii::t('SocialStatsModule.base', 'Last Week'); ?></span> - <span class='PeriodSelect SelectOneMonth'><?= Yii::t('SocialStatsModule.base', 'Last Month'); ?></span> - <span class='PeriodSelect SelectOneSixMo mybold'><?= Yii::t('SocialStatsModule.base', 'Last 6 Months'); ?></span> - <span class='PeriodSelect SelectOneYear'><?= Yii::t('SocialStatsModule.base', 'Last Year'); ?></span> - <span class='PeriodSelect SelectOneAll'><?= Yii::t('SocialStatsModule.base', 'All'); ?></span>
 		</div>
 		
 		<canvas class='myFullWidth margbothalf' id='MyDailyChart'></canvas>
 		
 		<div class='mycentertext margbotquart mySlightlySmallerText'>
-			These are <span class='myita'>total</span> numbers per day..<br>
-			<span class='mySmallerText'>Please note that the data from this chart will build at the rate of once per day..<br>
-			So you will only see data points appear once per day..</span>
+			<?= Yii::t('SocialStatsModule.base', 'These are'); ?>
+			<span class='myita'><?= Yii::t('SocialStatsModule.base', 'total'); ?>
+			</span>
+			<?= Yii::t('SocialStatsModule.base', 'numbers per day..'); ?>
+			<br>
+			<span class='mySmallerText'>
+			    <?= Yii::t('SocialStatsModule.base', 'Please note that the data from this chart will build at the rate of once per day..'); ?>
+			<br>
+			    <?= Yii::t('SocialStatsModule.base', 'So you will only see data points appear once per day..'); ?>
+			</span>
 		</div>
 				<div class='myjustify myrighttext margbothalf'>
-					<span class='mySmallerText myturquoiseDark dlHistDataBU'>download backup of this data</span>
+					<span class='mySmallerText myturquoiseDark dlHistDataBU'><?= Yii::t('SocialStatsModule.base', 'download backup of this data'); ?></span>
 				</div>
 		
-		<span class='mySmallerText'>Historical Chart Process Time: <span class='DailyExec'>...</span></span>
+		<span class='mySmallerText'><?= Yii::t('SocialStatsModule.base', 'Historical Chart Process Time:'); ?> <span class='DailyExec'>...</span></span>
 		
 		<br><br>
 		
@@ -263,9 +274,9 @@ $MyBR='<br>';
 		<br><br>
 		
 		<div class='mycentertext margbotfull mysixteenpix mybold myunderline'>
-			Hourly Activity - <span class='mySmallerText'>(click data titles to disable/enable)</span>
+			<?= Yii::t('SocialStatsModule.base', 'Hourly Activity'); ?> - <span class='mySmallerText'><?= Yii::t('SocialStatsModule.base', '(click data titles to disable/enable)'); ?></span>
 		</div>
-		<div class='mycentertext margbotfull myita myturquoiseDark HourlyChartReady MyDataLoading'>Please wait for data to load..</div>
+		<div class='mycentertext margbotfull myita myturquoiseDark HourlyChartReady MyDataLoading'><?= Yii::t('SocialStatsModule.base', 'Please wait for data to load..'); ?></div>
 		
 		<?php
 			$ThisTimeZone=\Yii::$app->getTimeZone(); 
@@ -273,14 +284,14 @@ $MyBR='<br>';
 		?>
 		
 		<div class='myrighttext margbotquart'>
-			Change TimeZone <span class='mySmallerText'>(server time is <?php echo substr($ThisTimeZone,(strpos($ThisTimeZone,'/')+1)).' - UTC'.substr(date('P'),0,3); ?>)</span>: &emsp; 
+			<?= Yii::t('SocialStatsModule.base', 'Change TimeZone'); ?> <span class='mySmallerText'><?= Yii::t('SocialStatsModule.base', '(server time is'); ?> <?= substr($ThisTimeZone,(strpos($ThisTimeZone,'/')+1)).' - UTC'.substr(date('P'),0,3); ?>)</span>: &emsp; 
 			<span class='HourlyChartSelect SelectServerMinusThree'>-3h</span>
 			 &emsp;–&emsp; 
 			<span class='HourlyChartSelect SelectServerMinusTwo'>-2h</span>
 			 &emsp;–&emsp; 
 			<span class='HourlyChartSelect SelectServerMinusOne'>-1h</span>
 			 &emsp;–&emsp; 
-			<span class='HourlyChartSelect SelectServerTime mybold'>Server Time</span>
+			<span class='HourlyChartSelect SelectServerTime mybold'><?= Yii::t('SocialStatsModule.base', 'Server Time'); ?></span>
 			 &emsp;–&emsp; 
 			<span class='HourlyChartSelect SelectServerPlusOne'>+1h</span>
 			 &emsp;–&emsp; 
@@ -289,13 +300,13 @@ $MyBR='<br>';
 			<span class='HourlyChartSelect SelectServerPlusThree'>+3h</span>
 		</div>
 		
-		<canvas class='myFullWidth margbothalf' id='MyHourlyBreakdownChart'>Loading..</canvas>
+		<canvas class='myFullWidth margbothalf' id='MyHourlyBreakdownChart'><?= Yii::t('SocialStatsModule.base', 'Loading..'); ?></canvas>
 		
 		<div class='mycentertext margbotfull mySlightlySmallerText'>
-			These are <span class='myita'>total</span> numbers from the last 30 days at each hour; you would divide these numbers by 30 to get an average..
+			<?= Yii::t('SocialStatsModule.base', 'These are'); ?> <span class='myita'><?= Yii::t('SocialStatsModule.base', 'total'); ?></span> <?= Yii::t('SocialStatsModule.base', 'numbers from the last 30 days at each hour; you would divide these numbers by 30 to get an average..'); ?>
 		</div>
 		
-		<span class='mySmallerText'>Hourly Activity Process Time: <span class='HourlyExec'>...</span></span>
+		<span class='mySmallerText'><?= Yii::t('SocialStatsModule.base', 'Hourly Activity Process Time:'); ?> <span class='HourlyExec'>...</span></span>
 		
 		<br>
 		
@@ -304,14 +315,16 @@ $MyBR='<br>';
 		
 		<!-- Begin desperation -->
 		<div class='mycentertext margbothalf mySlightlySmallerText'>
-			if you find this module useful, please consider a donation<br>
-			it'd really, really, really, really, <br>
-			really, really, really help..
+			<?= Yii::t('SocialStatsModule.base', 'if you find this module useful, please consider a donation'); ?>
+			<br>
+			<?= Yii::t('SocialStatsModule.base', 'it\'d really, really, really, really,'); ?>
+			<br>
+			<?= Yii::t('SocialStatsModule.base', 'really, really, really help..'); ?>
 		</div>
 		<div id="donate-button-container" class='mycentertext'>
 			<div id="donate-button"></div>
-			<script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script>
-			<script>
+			<script <?= Html::nonce() ?> src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script>
+			<script <?= Html::nonce() ?>>
 				PayPal.Donation.Button({
 					env:'production',
 					hosted_button_id:'AEA7Q4V5RMY4S',
