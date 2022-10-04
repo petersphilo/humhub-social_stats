@@ -34,18 +34,20 @@ class Assets extends AssetBundle
 			]; 
 		*/
 		$this->js = [
-			'chart.min.js',
-			'chart.esm.js',
-			'chart.mjs',
-			'helpers.esm.js',
-			'helpers.mjs',
-			'chunks/helpers.segment.js',
-			'chunks/helpers.segment.mjs',
+			['chart.min.js', 'type' => 'module'],
+			['chart.esm.js', 'type' => 'module'],
+			['chart.mjs', 'type' => 'module'],
+			['helpers.esm.js', 'type' => 'module'],
+			['helpers.mjs', 'type' => 'module'],
+			['chunks/helpers.segment.js', 'type' => 'module'],
+			['chunks/helpers.segment.mjs', 'type' => 'module'],
 			'Social_Stats.js'
 			]; 
+		/*
 		$this->publishOptions = [
 			'forceCopy' => true
 			];
+		*/
 		parent::init();
 		}
 	}

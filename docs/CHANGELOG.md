@@ -1,4 +1,8 @@
 
+### 1.0.6
+
+- fixed duplicated assets..
+
 ### 1.0.5
 
 - Fixed redirection issue for HumHub installs that **are not using** the `enablePrettyUrl` config option

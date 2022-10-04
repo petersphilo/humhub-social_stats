@@ -226,12 +226,6 @@ $MyBR='<br>';
 			use humhub\modules\social_stats\Assets; 
 			$MyAssets=humhub\modules\social_stats\Assets::register($this);
 		?>
-		<script type='module' src='<?php echo $MyAssets->baseUrl.'/'.$MyAssets->js[0]; ?>'></script>
-		<script type='module' src='<?php echo $MyAssets->baseUrl.'/'.$MyAssets->js[1]; ?>'></script>
-		<script type='module' src='<?php echo $MyAssets->baseUrl.'/'.$MyAssets->js[2]; ?>'></script>
-		<script type='module' src='<?php echo $MyAssets->baseUrl.'/'.$MyAssets->js[3]; ?>'></script>
-		<script type='module' src='<?php echo $MyAssets->baseUrl.'/'.$MyAssets->js[4]; ?>'></script>
-		<script src='<?php echo $MyAssets->baseUrl.'/'.$MyAssets->js[5]; ?>'></script>
 		
 		
 		<div class='mycentertext margbotfull mysixteenpix mybold myunderline'>
