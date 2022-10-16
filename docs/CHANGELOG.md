@@ -1,4 +1,8 @@
 
+### Unreleased
+
+- Added translations
+
 ### 1.0.6
 
 - fixed duplicated assets..
