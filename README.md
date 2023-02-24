@@ -29,7 +29,8 @@ Thank You!
 
 ### Please Note
 
-If you're having trouble with the charts loading:Please add the following to the .htaccess file that is at the root of your HumHub installation:
+If you're having trouble with the charts loading:
+Please add the following to the .htaccess file that is at the root of your HumHub installation:
 ```
 AddType text/javascript .mjs
 ```
