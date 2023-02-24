@@ -27,7 +27,8 @@ As an Admin, go to `Administration`, then `Modules`, then you can search for `So
 
 Thank You!
 
-### Please Note:
+### Please Note
+
 If you're having trouble with the charts loading:
 Please add the following to the .htaccess file that is at the root of your HumHub installation:
 ```
