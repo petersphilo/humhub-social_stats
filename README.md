@@ -27,6 +27,14 @@ As an Admin, go to `Administration`, then `Modules`, then you can search for `So
 
 Thank You!
 
+### Please Note:
+If you're having trouble with the charts loading:
+Please add the following to the .htaccess file that is at the root of your HumHub installation:
+```
+AddType text/javascript .mjs
+```
+If you can't edit your .htaccess file, usually simply reloading the page works..
+
 <br><br>
 
 ## Donationware -- Consider a Donation!!

@@ -1,4 +1,8 @@
 
+### 1.0.7
+
+- added translations..
+
 ### 1.0.6
 
 - fixed duplicated assets..
