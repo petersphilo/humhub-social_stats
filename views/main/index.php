@@ -57,7 +57,7 @@ $MyBR='<br>';
 			.myturquoiseDark, .myturquoiseDark a, .myturquoiseDark a:visited, a.myturquoiseDark, a.myturquoiseDark:visited {color: #1a8285; } /* 0070C0 orig: 014539 */
 			.myturquoiseDark a:hover, a.myturquoiseDark:hover {color: #215868; }
 			.SlideyBlock {display: inline-block; margin: 0.5em 1em 0.5em 0em; min-width: 16em; vertical-align: top; }
-			.PeriodSelect, .HourlyChartSelect, .dlInactiveUsers, .dlHistDataBU {cursor: pointer; }
+			.PeriodSelect, .HourlyChartSelect, .dlInactiveUsers, .dlAllUsers, .dlHistDataBU {cursor: pointer; }
 			.myFullWidth{width: 100%; margin: 0 auto; min-height: 500px; height: 60%; }
 			.MyDataLoading {
 				text-shadow: 0px 0px 1px rgba(255,255,255,1), 0px 0px 7px rgba(90,255,90,0.75), 0px 0px 14px rgba(60,255,60,0.6), 0px 0px 22px rgba(90,255,90,0.5); color: rgba(26,130,133,1); 
@@ -87,7 +87,10 @@ $MyBR='<br>';
 				</div>
 				<div class='myjustify myrighttext margbotquart'>
 					<span class='mySmallerText myturquoiseDark dlInactiveUsers'><?php echo Yii::t('SocialStatsModule.AllMessages','download Users never logged in'); ?></span>
-				</div>
+				</div> <!--
+				<div class='myjustify myrighttext margbotquart'>
+					<span class='mySmallerText myturquoiseDark dlAllUsers'>download All Users</span>
+				</div> -->
 				<div class='myjustify margbotfull'>
 					<?php echo Yii::t('SocialStatsModule.AllMessages','Please Note: Loading this page is quite costly to the server; please don\'t reload too often..'); ?>
 					<br>
@@ -222,11 +225,6 @@ $MyBR='<br>';
 		
 		<br><br>
 		
-		<?php
-			use humhub\modules\social_stats\Assets; 
-			$MyAssets=humhub\modules\social_stats\Assets::register($this);
-		?>
-		
 		
 		<div class='mycentertext margbotfull mysixteenpix mybold myunderline'>
 			<?php echo Yii::t('SocialStatsModule.AllMessages','Historical data'); ?> - <span class='mySmallerText'>(<?php echo Yii::t('SocialStatsModule.AllMessages','click data titles to disable/enable'); ?>)</span>
@@ -304,8 +302,8 @@ $MyBR='<br>';
 		</div>
 		<div id="donate-button-container" class='mycentertext'>
 			<div id="donate-button"></div>
-			<script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script>
-			<script>
+			<script <?php echo humhub\libs\Html::nonce(); ?> src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script>
+			<script <?php echo humhub\libs\Html::nonce(); ?>>
 				PayPal.Donation.Button({
 					env:'production',
 					hosted_button_id:'AEA7Q4V5RMY4S',
@@ -320,4 +318,9 @@ $MyBR='<br>';
 		<!-- i wish i could say that's the end of it.. -->
 	</div>
 </div>
+		
+		<?php
+			use humhub\modules\social_stats\Assets; 
+			$MyAssets=humhub\modules\social_stats\Assets::register($this);
+		?>
 

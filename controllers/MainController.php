@@ -40,7 +40,7 @@ class MainController extends \humhub\modules\admin\components\Controller{
 	
 	
 	public function actionIndex(){
-		if(Yii::$app->request->post()||Yii::$app->request->get('dlInactiveAccnts')||Yii::$app->request->get('dlHistDataBU')){$this->MyDataRequest(); }
+		if(Yii::$app->request->post()||Yii::$app->request->get('dlInactiveAccnts')||Yii::$app->request->get('dlAllAccnts')||Yii::$app->request->get('dlHistDataBU')){$this->MyDataRequest(); }
 		else{return $this->render('index'); }
 		}
 	
@@ -49,15 +49,35 @@ class MainController extends \humhub\modules\admin\components\Controller{
 		
 		if(Yii::$app->request->get('dlInactiveAccnts')=='Yes'){
 			$MyTabChar="\t"; 
-			$dlInactiveAccntsFile='email'.$MyTabChar.'username'/* .$MyTabChar.'previousid' */."\n"; 
-			$dlInactiveAccnts_cmd=Yii::$app->db->createCommand("SELECT user.email,user.username 
-				FROM user 
-				WHERE last_login is null;")->queryAll(); 
-			/* $dlInactiveAccnts_cmd=Yii::$app->db->createCommand("SELECT user.email, user.username, profile.previousid FROM user, profile WHERE ((user.last_login is null)AND(profile.user_id=user.id));")->queryAll();  */
+			$dlInactiveAccntsFile='email'.$MyTabChar.'username'.$MyTabChar.'group names'."\n"; 
+			$dlInactiveAccnts_cmd=Yii::$app->db->createCommand("SELECT user.id as UserID, user.email, user.username FROM user WHERE (user.last_login is null);")->queryAll(); 
 			foreach($dlInactiveAccnts_cmd as $dlInactiveAccnts_row){
-				$dlInactiveAccntsFile.=$dlInactiveAccnts_row['email'].$MyTabChar.$dlInactiveAccnts_row['username']/* .$MyTabChar.$dlInactiveAccnts_row['previousid'] */."\n";
+				$EachUserID=$dlInactiveAccnts_row['UserID']; 
+				$EachUserGroupNames=''; 
+				$eachUserGroups_cmd=Yii::$app->db->createCommand("SELECT group.name as GroupName FROM `group`,group_user WHERE ((group_user.group_id=group.id)AND(group_user.user_id=$EachUserID));")->queryAll(); 
+				foreach($eachUserGroups_cmd as $eachUserGroups_row){
+					$EachUserGroupNames.=$eachUserGroups_row['GroupName'].'; ';
+					}
+				$dlInactiveAccntsFile.=$dlInactiveAccnts_row['email'].$MyTabChar.$dlInactiveAccnts_row['username'].$MyTabChar.substr($EachUserGroupNames,0,-2)."\n";
 				}
 			echo $dlInactiveAccntsFile; 
+			exit;
+			}
+		
+		elseif(Yii::$app->request->get('dlAllAccnts')=='Yes'){
+			$MyTabChar="\t"; 
+			$dlAllAccntsFile='UserID'.$MyTabChar.'email'.$MyTabChar.'username'.$MyTabChar.'last_login'.$MyTabChar.'group names'."\n"; 
+			$dlAllAccnts_cmd=Yii::$app->db->createCommand("SELECT user.id as UserID, user.email, user.username, user.last_login FROM user WHERE user.id<>0;")->queryAll(); 
+			foreach($dlAllAccnts_cmd as $dlAllAccnts_row){
+				$EachUserID=$dlAllAccnts_row['UserID']; 
+				$EachUserGroupNames=''; 
+				$eachUserGroups_cmd=Yii::$app->db->createCommand("SELECT group.name as GroupName FROM `group`,group_user WHERE ((group_user.group_id=group.id)AND(group_user.user_id=$EachUserID));")->queryAll(); 
+				foreach($eachUserGroups_cmd as $eachUserGroups_row){
+					$EachUserGroupNames.=$eachUserGroups_row['GroupName'].'; ';
+					}
+				$dlAllAccntsFile.=$dlAllAccnts_row['UserID'].$MyTabChar.$dlAllAccnts_row['email'].$MyTabChar.$dlAllAccnts_row['username'].$MyTabChar.$dlAllAccnts_row['last_login'].$MyTabChar.substr($EachUserGroupNames,0,-2)."\n";
+				}
+			echo $dlAllAccntsFile; 
 			exit;
 			}
 		
@@ -291,18 +311,6 @@ class MainController extends \humhub\modules\admin\components\Controller{
 			exit;
 			}
 		
-		}
-	
-	
-	public function actionHistoricalData(){
-		}
-	
-	
-	public function actionGeneralData(){
-		}
-	
-	
-	public function actionHourlyActivityData(){
 		}
 	
 	}

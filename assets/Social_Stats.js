@@ -82,6 +82,28 @@
 						.catch(() => alert('something went wrong..'));
 					}); 
 				
+				/*
+				$('.dlAllUsers').on('click',function(){
+					MyCurrentGetURL=window.location.search; 
+					if(MyCurrentGetURL.length){MyNewGetURL=MyCurrentGetURL+'&dlAllAccnts=Yes'; }
+					else{MyNewGetURL='./?dlAllAccnts=Yes'; }
+					// console.log('MyCurrentGetURL.length: '+MyCurrentGetURL.length+'; MyCurrentGetURL: '+MyCurrentGetURL+'; MyNewGetURL: '+MyNewGetURL); 
+					fetch(MyNewGetURL)
+						.then(resp => resp.blob())
+						.then(blob => {
+							var Myurl = window.URL.createObjectURL(blob);
+							const TempdlLink = document.createElement('a');
+							TempdlLink.style.display = 'none';
+							TempdlLink.href = Myurl;
+							TempdlLink.download = 'AllAccnts.csv';
+							document.body.appendChild(TempdlLink);
+							TempdlLink.click();
+							window.URL.revokeObjectURL(Myurl);
+							TempdlLink.remove();
+							})
+						.catch(() => alert('something went wrong..'));
+					}); 
+				*/
 				
 				$('.dlHistDataBU').on('click',function(){
 					MyCurrentGetURL=window.location.search; 
