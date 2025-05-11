@@ -14,11 +14,6 @@ class m100283_215831_initial extends Migration{
 			'category' => 'varchar(28) NULL',
 			], '');
 		$this->safeCreateIndex('category','social_stats','category',false);
-		$this->safeCreateIndex('last_login','user','last_login',false);
-		$this->safeCreateIndex('updated_at','post','updated_at',false);
-		$this->safeCreateIndex('updated_at','comment','updated_at',false);
-		$this->safeCreateIndex('updated_at','like','updated_at',false);
-		$this->safeCreateIndex('SourceCreated','notification',['created_at', 'source_class'],false);
 		}
 
 	public function down(){

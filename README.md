@@ -9,6 +9,10 @@ The first day, it'll look empty..
 
 This is where Master Yoda should intervene with some sort of aphorism about patience..
 
+### Important!
+
+if you have trouble with charts not appearing, please reload the page..
+
 ### Explanation of Logins data:
 
 Please note that HumHub does not record historical data regarding Logins..  

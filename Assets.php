@@ -18,12 +18,11 @@ namespace humhub\modules\social_stats;
 
 use Yii;
 use yii\web\AssetBundle;
+//use yii\web\JqueryAsset; 
 
 class Assets extends AssetBundle
 	{
-	public function init()
-		{
-		$this->sourcePath = dirname(__FILE__).'/assets';
+		public $sourcePath = '@social_stats/assets';
 		/*
 		$this->js = [
 			['chart.min.js', 'type' => 'module'],
@@ -33,21 +32,19 @@ class Assets extends AssetBundle
 			['helpers.mjs', 'type' => 'module']
 			]; 
 		*/
-		$this->js = [
+		public $js = [
 			['chart.min.js', 'type' => 'module'],
 			['chart.esm.js', 'type' => 'module'],
 			['chart.mjs', 'type' => 'module'],
 			['helpers.esm.js', 'type' => 'module'],
 			['helpers.mjs', 'type' => 'module'],
 			['chunks/helpers.segment.js', 'type' => 'module'],
-			['chunks/helpers.segment.mjs', 'type' => 'module'],
-			'Social_Stats.js'
+			['chunks/helpers.segment.mjs', 'type' => 'module']
 			]; 
 		/*
 		$this->publishOptions = [
 			'forceCopy' => true
 			];
 		*/
-		parent::init();
-		}
+		//public $depends=[JqueryAsset::class]; 
 	}

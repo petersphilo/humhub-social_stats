@@ -1,4 +1,10 @@
 
+
+### 1.1.0
+
+- re-worked a significant portion of the code in the hopes of no longer having to reload the page at first load, but, no joy..
+if you have trouble with charts not appearing, please reload the page..
+
 ### 1.0.7
 
 - added translations..

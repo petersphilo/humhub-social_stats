@@ -16,5 +16,18 @@
 
 namespace humhub\modules\social_stats;
 
+use Yii;
+use humhub\models\Setting;
+
 class Module extends \humhub\components\Module {
+	public function enable()
+	{
+		parent::enable();
+		
+		$social_stats=Yii::$app->getModule('social_stats'); 
+		
+		if ($social_stats->settings->get('showDesperation') == '') {
+			$social_stats->settings->set('showDesperation', 1); 
+			}
+		}
 	}
