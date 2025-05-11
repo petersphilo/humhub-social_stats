@@ -11,31 +11,22 @@
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  
  */
 
-
-/* use Yii; */
 use humhub\modules\admin\permissions\ManageModules;
-
 use yii\helpers\Url;
 use yii\helpers\Html;
-//use yii\base\Application;
-//use yii\db; 
-/* use yii\base\Module;  */
-use yii\web\AssetBundle;
-
 use humhub\models\Setting;
-
+use humhub\modules\social_stats\assets\Assets; 
 
 if (!\Yii::$app->user->can(ManageModules::class)) {
 	return; 
 	}
 
-$social_stats=Yii::$app->getModule('social_stats'); 
-$myDesperationSetting=$social_stats->settings->get('showDesperation'); 
+$social_stats = Yii::$app->getModule('social_stats'); 
+$myDesperationSetting = $social_stats->settings->get('showDesperation'); 
 //$myDesperationSetting=1;
-$MyBR='<br>'; 
+$MyBR = '<br>'; 
 
-use humhub\modules\social_stats\Assets; 
-$MyAssets=humhub\modules\social_stats\Assets::register($this);
+$MyAssets = Assets::register($this);
 
 ?>
 		
