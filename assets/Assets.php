@@ -22,7 +22,7 @@ use yii\web\JqueryAsset;
 
 class Assets extends AssetBundle
 	{
-		public $sourcePath = '@social_stats/assets';
+		public $sourcePath = '@social_stats/resources';
 
 		public $js = [
 			['js/chart.min.js'],
