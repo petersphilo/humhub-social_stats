@@ -53,7 +53,6 @@ $MyAssets=Assets::register($this);
 			.margbotfull {margin-bottom: 1em !important; }
 			.margbothalf {margin-bottom: 0.5em !important; }
 			.margbotquart {margin-bottom: 0.25em !important; }
-			.myjustify {text-align: justify; }
 			.mysixteenpix {font-size: 1.2em; line-height: 1.4em; }
 			.myfifteenpix {font-size: 1.1em; line-height: 1.3em; }
 			.mySmallerText {font-size: 0.8em; line-height: 1em; }
@@ -94,7 +93,7 @@ $MyAssets=Assets::register($this);
 					<span class='mySmallerText btn-sm btn btn-default dlInactiveUsers'><?php echo Yii::t('SocialStatsModule.AllMessages','download Users never logged in'); ?></span>
 				</div>
 				<div class='myjustify myrighttext margbotquart'>
-					<span class='mySmallerText btn-sm btn btn-default dlAllUsers'>download All Users</span>
+					<span class='mySmallerText btn-sm btn btn-default dlAllUsers'><?php echo Yii::t('SocialStatsModule.AllMessages','download All Users'); ?></span>
 				</div>
 				<div class='myjustify margbotfull'>
 					<?php echo Yii::t('SocialStatsModule.AllMessages','Please Note: <br>if the charts don\'t appear, please reload the page, <br>however, loading this page is quite costly to the server; please don\'t reload too often..'); ?>
@@ -375,14 +374,14 @@ $MyAssets=Assets::register($this);
 					data: {
 						datasets: [
 							{
-								label: 'Daily Logins',
+								label: "<?php echo Yii::t('SocialStatsModule.AllMessages','Daily Logins'); ?>",
 								borderColor: 'rgba(75,192,192,0.98)', /* #4bc0c0 */
 								backgroundColor: 'rgba(75,192,192,0.98)',
 								data:DailyLoginsSixMo,
 								indexAxis:'x',
 								},
 							{
-								label: 'Daily Posts',
+								label: "<?php echo Yii::t('SocialStatsModule.AllMessages','Daily Posts'); ?>",
 								borderColor: 'rgba(66,151,253,0.98)', /* #4297fd */
 								backgroundColor: 'rgba(66,151,253,0.98)',
 								data:DailyPostsSixMo,
@@ -390,7 +389,7 @@ $MyAssets=Assets::register($this);
 								/* hidden:true, */
 								},
 							{
-								label: 'Daily Comments',
+								label: "<?php echo Yii::t('SocialStatsModule.AllMessages','Daily Comments'); ?>",
 								borderColor: 'rgba(184,127,253,0.98)', /* #b87ffd */
 								backgroundColor: 'rgba(184,127,253,0.98)',
 								data:DailyCommentsSixMo,
@@ -398,7 +397,7 @@ $MyAssets=Assets::register($this);
 								/* hidden:true, */
 								},
 							{
-								label: 'Daily Likes',
+								label: "<?php echo Yii::t('SocialStatsModule.AllMessages','Daily Likes'); ?>",
 								borderColor: 'rgba(0,224,127,0.98)', /* #00e07f */
 								backgroundColor: 'rgba(0,224,127,0.98)',
 								data:DailyLikesSixMo,
@@ -406,7 +405,7 @@ $MyAssets=Assets::register($this);
 								/* hidden:true, */
 								},
 							{
-								label: 'Daily Follows',
+								label: "<?php echo Yii::t('SocialStatsModule.AllMessages','Daily Follows'); ?>",
 								borderColor: 'rgba(198,106,140,0.98)', /* #c66a8c */
 								backgroundColor: 'rgba(198,106,140,0.98)',
 								data:DailyFollowsSixMo,
@@ -514,7 +513,7 @@ $MyAssets=Assets::register($this);
 					data: {
 						datasets: [
 							{
-								label: 'Hourly Logins',
+								label: "<?php echo Yii::t('SocialStatsModule.AllMessages','Hourly Logins'); ?>",
 								borderColor: 'rgba(75,192,192,0.98)',
 								backgroundColor: 'rgba(75,192,192,0.25)',
 								fill:'start',
@@ -523,7 +522,7 @@ $MyAssets=Assets::register($this);
 								tension: 0.2,
 								},
 							{
-								label: 'Hourly Posts',
+								label: "<?php echo Yii::t('SocialStatsModule.AllMessages','Hourly Posts'); ?>",
 								borderColor: 'rgba(66,151,253,0.98)',
 								backgroundColor: 'rgba(66,151,253,0.25)',
 								fill:'start',
@@ -532,7 +531,7 @@ $MyAssets=Assets::register($this);
 								tension: 0.2,
 								},
 							{
-								label: 'Hourly Comments',
+								label: "<?php echo Yii::t('SocialStatsModule.AllMessages','Hourly Comments'); ?>",
 								borderColor: 'rgba(184,127,253,0.98)',
 								backgroundColor: 'rgba(184,127,253,0.25)',
 								fill:'start',
@@ -541,7 +540,7 @@ $MyAssets=Assets::register($this);
 								tension: 0.2,
 								},
 							{
-								label: 'Hourly Likes',
+								label: "<?php echo Yii::t('SocialStatsModule.AllMessages','Hourly Likes'); ?>",
 								borderColor: 'rgba(0,224,127,0.98)',
 								backgroundColor: 'rgba(0,224,127,0.25)',
 								fill:'start',
@@ -550,7 +549,7 @@ $MyAssets=Assets::register($this);
 								tension: 0.2,
 								},
 							{
-								label: 'Hourly Follows',
+								label: "<?php echo Yii::t('SocialStatsModule.AllMessages','Hourly Follows'); ?>",
 								borderColor: 'rgba(198,106,140,0.98)',
 								backgroundColor: 'rgba(198,106,140,0.25)',
 								fill:'start',
@@ -569,7 +568,7 @@ $MyAssets=Assets::register($this);
 									}, 
 								title: {
 									display: true,
-									text: 'Hour of Day (Data from the Last 30 Days)',
+									text: "<?php echo Yii::t('SocialStatsModule.AllMessages','Hour of Day (Data from the Last 30 Days)'); ?>",
 									}
 								},
 							yAxis: {

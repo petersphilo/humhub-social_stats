@@ -1,5 +1,9 @@
 
 
+### 1.1.2
+
+minor translation update
+
 ### 1.1.1
 
 re-jiggered Assets with the help of Tony GM
