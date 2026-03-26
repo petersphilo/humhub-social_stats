@@ -28,7 +28,7 @@ class MainController extends \humhub\modules\admin\components\Controller{
 	public function behaviors(){
 		return [
 			'acl' => [
-				'class' => \humhub\components\behaviors\AccessControl::className(),
+				'class' => \humhub\components\behaviors\AccessControl::class,
 				'adminOnly' => true
 				]
 			];

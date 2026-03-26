@@ -7,13 +7,13 @@
 		"homepage": "zconsulting.net",
 		"role": "The Alpha, The Omega - just kidding; it's just me.."
 		}],
-	"description": "This module provides general statistics on overall activity, with charts of hourly and daily activity (This is only available to admins..)<br><br>Please note that uninstalling this module will destroy its historical chart data..",
+	"description": "This module provides general statistics on overall activity, with charts of hourly and daily activity (This is only available to admins..)",
 	"keywords": [
 		"usage", "statistics"
 		],
-	"version": "1.1.2",
+	"version": "1.1.4",
 	"humhub": {
-		"minVersion": "1.12.0"
+		"minVersion": "1.18.0"
 		},
 	"screenshots": ["assets/screen-1.jpg","assets/screen-2.jpg","assets/screen-3.jpg"]
 }

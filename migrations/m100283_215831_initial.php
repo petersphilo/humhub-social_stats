@@ -7,6 +7,9 @@ use humhub\components\Migration;
 class m100283_215831_initial extends Migration{
 	
 	public function up(){
+		if ($this->db->schema->getTableSchema('social_stats', true) !== null) {
+			return true;
+		}
 		$this->createTable('social_stats', [
 			'id' => 'pk',
 			'x_value' => 'varchar(28) NULL',
