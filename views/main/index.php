@@ -16,7 +16,7 @@
 use humhub\modules\admin\permissions\ManageModules;
 
 use yii\helpers\Url;
-use yii\helpers\Html;
+use humhub\helpers\Html;
 
 use humhub\models\Setting;
 
@@ -299,7 +299,7 @@ $MyAssets=Assets::register($this);
 		<span class='testarea'></span>
 		<br>
 		
-		<script <?php echo humhub\libs\Html::nonce(); ?>>
+		<script <?= Html::nonce() ?>>
 			/* -- Begin main inline JS */
 			$(function(){
 				var MyDailyChartSelector=$('#MyDailyChart'),
@@ -853,8 +853,8 @@ $MyAssets=Assets::register($this);
 			</div>
 			<div id="donate-button-container" class='mycentertext margbothalf'>
 				<div id="donate-button"></div>
-				<script <?php echo humhub\libs\Html::nonce(); ?> src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script>
-				<script <?php echo humhub\libs\Html::nonce(); ?>>
+				<script <?= Html::nonce() ?> src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script>
+				<script <?= Html::nonce() ?>>
 					PayPal.Donation.Button({
 						env:'production',
 						hosted_button_id:'AEA7Q4V5RMY4S',

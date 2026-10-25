@@ -1,5 +1,12 @@
 
 
+### 1.1.4
+
+- Fix compatibility with HumHub 1.18.x
+- Replace deprecated `className()` calls with `::class`
+- Fix asset bundle to load Chart.js only once (remove duplicate ESM/MJS entries causing JS errors)
+- Preserve historical data on uninstall (table is no longer dropped)
+
 ### 1.1.2
 
 minor translation update

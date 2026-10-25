@@ -37,13 +37,7 @@ class Assets extends AssetBundle
 		*/
 		public $js = [
 			['js/chart.min.js'],
-			['js/chart.esm.js'],
-			['js/chart.mjs', 'type' => 'module'],
-			['js/helpers.esm.js'],
-			['js/helpers.mjs', 'type' => 'module'],
-			['js/chunks/helpers.segment.js'],
-			['js/chunks/helpers.segment.mjs', 'type' => 'module']
-			]; 
+			];
 		
 		public $depends=[JqueryAsset::class]; 
 	}

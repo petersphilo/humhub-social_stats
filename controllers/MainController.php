@@ -28,7 +28,7 @@ class MainController extends \humhub\modules\admin\components\Controller{
 	public function behaviors(){
 		return [
 			'acl' => [
-				'class' => \humhub\components\behaviors\AccessControl::className(),
+				'class' => \humhub\components\behaviors\AccessControl::class,
 				'adminOnly' => true
 				]
 			];
@@ -65,9 +65,9 @@ class MainController extends \humhub\modules\admin\components\Controller{
 				FROM comment 
 				WHERE (updated_at >= (NOW() - INTERVAL :Num DAY));"); 
 	
-			$GD_ReadLikes_cmd=Yii::$app->db->createCommand("SELECT COUNT(updated_at) AS Likes 
+			$GD_ReadLikes_cmd=Yii::$app->db->createCommand("SELECT COUNT(created_at) AS Likes 
 				FROM `like` 
-				WHERE (updated_at >= (NOW() - INTERVAL :Num DAY));"); 
+				WHERE (created_at >= (NOW() - INTERVAL :Num DAY));"); 
 	
 			$GD_ReadFollows_cmd=Yii::$app->db->createCommand("SELECT COUNT(created_at) AS Follows 
 				FROM notification 
@@ -221,7 +221,7 @@ class MainController extends \humhub\modules\admin\components\Controller{
 			$HourlyData['HourlyBreakdownLikes']=[]; 
 			foreach($TwentyFourHours as $eachHour=>$nextHour){
 				$TheAS='Likes_'.$eachHour.'_'.$nextHour; 
-				$Likes_hourly_cmd[$eachHour]=Yii::$app->db->createCommand("SELECT COUNT(updated_at) AS $TheAS FROM `like` WHERE ((updated_at >= (NOW() - INTERVAL 30 DAY)) AND (HOUR(updated_at) = '$eachHour')); ")->queryScalar(); 
+				$Likes_hourly_cmd[$eachHour]=Yii::$app->db->createCommand("SELECT COUNT(created_at) AS $TheAS FROM `like` WHERE ((created_at >= (NOW() - INTERVAL 30 DAY)) AND (HOUR(created_at) = '$eachHour')); ")->queryScalar(); 
 				//$HourlyData['HourlyBreakdownLikes'].="{x:'$eachHour"."h',y:'$Likes_hourly_cmd[$eachHour]'},";
 				array_push($HourlyData['HourlyBreakdownLikes'],['x'=>($eachHour.'h'),'y'=>$Likes_hourly_cmd[$eachHour]]);
 				};

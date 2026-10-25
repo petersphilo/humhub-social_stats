@@ -28,7 +28,7 @@ return [
 	'class' => 'humhub\modules\social_stats\Module',
 	'namespace' => 'humhub\modules\social_stats',
 	'events' => [
-		['class' => AdminMenu::className(), 'event' => AdminMenu::EVENT_INIT, 'callback' => ['humhub\modules\social_stats\Events', 'onAdminMenuInit']],
+		['class' => AdminMenu::class, 'event' => AdminMenu::EVENT_INIT, 'callback' => ['humhub\modules\social_stats\Events', 'onAdminMenuInit']],
 		['class' => CronController::class, 'event' => CronController::EVENT_ON_DAILY_RUN, 'callback' => ['humhub\modules\social_stats\Events', 'onDailyCronRun']],
 		/* ['class' => CronController::class, 'event' => CronController::EVENT_ON_HOURLY_RUN, 'callback' => ['humhub\modules\social_stats\Events', 'onDailyCronRun']], */
 		],

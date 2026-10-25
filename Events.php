@@ -66,9 +66,9 @@ class Events extends \yii\base\BaseObject{
 				FROM comment 
 				WHERE (updated_at >= (NOW() - INTERVAL 1 DAY));")->queryScalar(); 
 		
-		$ReadLikes=Yii::$app->db->createCommand("SELECT COUNT(updated_at) AS Likes 
+		$ReadLikes=Yii::$app->db->createCommand("SELECT COUNT(created_at) AS Likes 
 				FROM `like` 
-				WHERE (updated_at >= (NOW() - INTERVAL 1 DAY));")->queryScalar(); 
+				WHERE (created_at >= (NOW() - INTERVAL 1 DAY));")->queryScalar(); 
 		
 		$ReadFollows=Yii::$app->db->createCommand("SELECT COUNT(created_at) AS Follows 
 				FROM notification 
